@@ -34,8 +34,8 @@ if (user_word[4] == user_letter):
     count_matching_chr = count_matching_chr + 1
 
 if (count_matching_chr > 1):
-    print(str(count_matching_chr) + " instances of " + user_letter + " in " + user_word)
+    print(str(count_matching_chr) + " instances of " + user_letter + " found in " + user_word)
 if (count_matching_chr == 1):
-    print(str(count_matching_chr) + " instance of " + user_letter + " in " + user_word)
+    print(str(count_matching_chr) + " instance of " + user_letter + " found in " + user_word)
 if (count_matching_chr == 0):
     print("No instances of " + user_letter + " found in " + user_word)
