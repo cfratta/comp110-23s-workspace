@@ -4,7 +4,7 @@ __author__ = "730566852"
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    SECRET: str = "darius"
+    SECRET: str = "codes"
     track_turns: int = 1
     user_won: bool = False
 
@@ -26,13 +26,13 @@ def contains_char(search_str: str, check_char: str) -> bool:
     """Check (True or False) if character is in string"""
     assert len(check_char) == 1
     idx: int = 0
+    result: bool = False
     
     while idx < len(search_str): #go through each character in the word to check for character
         if search_str[idx] == check_char:
-            return True
-        else: 
-            idx = idx + 1
-    return False
+            result = True
+        idx = idx + 1
+    return result
 
 def emojified(guess: str, secret: str) -> str:
     """Given two strings of equal length, use contains_char to compare strings and return a string of emojies like Wordle"""
@@ -57,10 +57,10 @@ def emojified(guess: str, secret: str) -> str:
 
 def input_guess(expected_len: int) -> str:
     """Check if the user's input word length is expected. Re-prompt until user word length is the expected length."""
-    user_guess = input(f"Enter a {expected_len} character word: ")
+    user_guess: str = input(f"Enter a {expected_len} character word: ")
     
     while len(user_guess) != expected_len:  # user input length is either longer or shorter than expected
-        user_guess = input(f"That is not {expected_len} char guess! Try again: ")
+        user_guess = input(f"That wasn't {expected_len} chars! Try again: ")
     return user_guess  # user input word length is equal to the expected length
 
 if __name__ == "__main__":
