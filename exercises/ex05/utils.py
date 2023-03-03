@@ -26,19 +26,13 @@ def sub(xs: list[int], start: int, stop: int) -> list[int]:
     """Return a new list based on given indexes on old list."""
     sub_list: list[int] = []
     
-    if start < 0:
-        print("Start index is negative")
-        return sub_list
+    if start < 0:  # start is a negative number
+        start = 0
+            
+    if stop > len(xs):  # stop is greater than the length of the list
+        step = len(xs)
     
-    if stop > len(xs):
-        print("End index is out of range")
-        return sub_list
-    
-    if sum(xs) == 0:
-        print("List has no elements")
-        return sub_list
-    
-    if start == len(xs):
+    if len(list) == 0 or start >= len(list) or stop <= 0:  # start is >= length of the list, or the end is at most 0, return the empty list
         return sub_list
     
     for idx in range(start, stop):  # go through each element in given index range
