@@ -30,7 +30,7 @@ def sub(xs: list[int], start: int, stop: int) -> list[int]:
         print("Start index is negative")
         return sub_list
     
-    if stop > len(xs)
+    if stop > len(xs):
         print("End index is out of range")
         return sub_list
     
