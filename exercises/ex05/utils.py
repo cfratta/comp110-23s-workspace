@@ -25,6 +25,22 @@ def concat(list1: list[int], list2: list[int]) -> list[int]:
 def sub(xs: list[int], start: int, stop: int) -> list[int]:
     """Return a new list based on given indexes on old list."""
     sub_list: list[int] = []
+    
+    if start < 0:
+        print("Start index is negative")
+        return sub_list
+    
+    if stop > len(xs)
+        print("End index is out of range")
+        return sub_list
+    
+    if sum(xs) == 0:
+        print("List has no elements")
+        return sub_list
+    
+    if start == len(xs):
+        return sub_list
+    
     for idx in range(start, stop):  # go through each element in given index range
         sub_list.append(xs[idx])
     return sub_list
