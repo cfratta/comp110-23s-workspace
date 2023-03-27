@@ -39,14 +39,14 @@ def favorite_color(input: dict[str, str]) -> str:
         if poll[fav] < poll[key]:  # check for highest value number for most common color.
             fav = key
             return fav
-        elif poll[fav] == poll[key]:  # everyone has the same favorite oclor.
+        elif poll[fav] == poll[key]:  # everyone has the same favorite color.
             return "None"
-        else:
+        else:  # tie for favorite color. (maybe add clause?)
             return "None"
 
         
 
-def count(input: list[str]) -> dict[str, str]:
+def count(input: list[str]) -> dict[str, int]:
     """Create a dictionary that tracks how many times each elements appeared in a given list."""
     counter: dict[str, int] = {}
 
