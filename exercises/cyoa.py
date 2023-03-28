@@ -28,7 +28,7 @@ def main() -> None:
 
             # Enter game loop
             if max_correct == 0:
-                print(f"So, let Us explain how this game works: each time you guess a coin toss correctly, you gain one life! Each time you guess a coin incorrectly, you lose a life. If you get a certain number of coin guesses correct in a row (you pick!), you win! If you run out of lives . . . well . . .")
+                print(f"So, let US explain how this game works: each time you guess a coin toss correctly, you gain one life! Each time you guess a coin incorrectly, you lose a life. If you get a certain number of coin guesses correct in a row (you pick!), you win! If you run out of lives . . . well . . .")
                 correct_streak(int(input(f"Choose your difficulty! Please enter how many coins you have to guess in a row to win. (Easy: 2, Medium: 3, Hard: 4+): ")))
 
             while points > 0 and max_correct > correct:
@@ -36,7 +36,7 @@ def main() -> None:
                 guess(input(f"Heads or tails?: "))
             
                 if points == 0:  # ran out of lives
-                    print(f"Sorry, {player}, your ran out of lives on this task has now expired. Try passing this test another time.")
+                    print(f"Sorry, {player}, your ran out of lives and this task has now expired. Try passing this test another time.")
                     play = False
                 if correct == max_correct:  # won game
                     print(f"Congratulations, {player}! You have won the game. Enjoy peace of mind until the next test.")
@@ -71,7 +71,7 @@ def what_are_you_hiding() -> None:
 def no() -> None:
     """If user types 'no' in Greet procedure, exit game"""
     global play
-    print(f"So, be it. But you shall come across this test again and you will not be able to say no. Until then.")
+    print(f"So be it. But you shall come across this test again and you will not be able to say no. Until then.")
     play = False
 
 
@@ -81,7 +81,7 @@ def correct_streak(user_input: int) -> int:
     global points
     if user_input < 2:
         points -= 1
-        user_input = int(input(f"Oi, {player}, don't think you can outsmart Us like that. We have accordingly removed one of your lives {LOST}, leaving you with a total of {points} lives. \n What difficulty do you pick, greater than 1?: "))
+        user_input = int(input(f"Oi, {player}, don't think you can outsmart US like that. We have accordingly removed one of your lives {LOST}, leaving you with a total of {points} lives. \n What difficulty do you pick, greater than 1?: "))
     max_correct = user_input
     return max_correct
 
