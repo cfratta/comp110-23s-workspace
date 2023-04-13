@@ -16,6 +16,7 @@ class Bear:
     def one_day(self):
         """After one day, increase Bear's age."""
         self.age += 1
+        self.hunger_score -= 1
         return None
     
     def eat(self, num_fish: int):
