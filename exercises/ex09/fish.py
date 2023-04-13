@@ -1,8 +1,8 @@
 """File to define Fish class."""
 
+
 class Fish:
     """Define Fish class wtih age and methods."""
-
 
     age: int
 

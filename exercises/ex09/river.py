@@ -5,9 +5,9 @@ __author__ = "730566852"
 from exercises.ex09.fish import Fish
 from exercises.ex09.bear import Bear
 
+
 class River:
     """Define River with day, bears, fish, and methods."""
-
 
     day: int  # what day of river's lifecycle I'm modeling
     bears: list[Bear]  # river's bears population
@@ -76,7 +76,7 @@ class River:
     
     def view_river(self):
         """Print a summary of the Fish and Bear population."""
-        print(f"~~~ Day {self.day} ~~~")
+        print(f"~~~ Day {self.day}: ~~~")
         print(f"Fish population: {len(self.fish)}")
         print(f"Bear population: {len(self.bears)}")
         return None

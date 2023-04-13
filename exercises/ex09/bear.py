@@ -1,8 +1,8 @@
-"""File to define Bear class"""
+"""File to define Bear class."""
+
 
 class Bear:
-    "Define Bear class wiht age, hunger_score, and methods."
-
+    """Define Bear class wiht age, hunger_score, and methods."""
 
     age: int
     hunger_score: int
@@ -10,7 +10,7 @@ class Bear:
     def __init__(self):
         """Define Bear."""
         self.age = 0
-        hunger_score: 0
+        self.hunger_score: 0
         return None
     
     def one_day(self):
