@@ -106,10 +106,10 @@ class River:
         
     def one_river_week(self):
         """Simulate one week of life in the river."""
-        idx: int = 0
-        while idx < 7:
-            self.one_river_day()
-            idx += 1
+        day: int = 1
+        while day < 8:
+            self.one_river_day
+            day += 1
         return None
     
     def remove_fish(self, amount: int):
